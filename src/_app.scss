@@ -5,7 +5,7 @@
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 200,
   'GRAD' 0,
   'opsz' 24
 }
@@ -17,4 +17,18 @@ body{
     padding: 0;
     min-height: 150svh;
     font-family: 'Roboto', sans-serif;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #4A4A4A;
+        border-radius: 500px;
+    }
+
 }

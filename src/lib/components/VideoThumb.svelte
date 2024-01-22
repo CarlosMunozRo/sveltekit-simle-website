@@ -1,12 +1,12 @@
 <script lang="ts">
-
     let thumbnail: string = "https://urgenciesveterinaries.com/wp-content/uploads/2023/09/survet-gato-caida-pelo-01.jpeg";
-    
     let src: string = "https://yt3.googleusercontent.com/ytc/AIf8zZTISnAkD2kHuVZMRVTr5QNCww-gagEU9xDdc_w6=s176-c-k-c0x00ffffff-no-rj";
+    export let id = 1;
+    
 </script>
 
-<div class="video">
-    <div class="thumb"><img src={thumbnail} alt=""></div>
+<a href={`/watch?v=${id}`} class="video">
+    <div class="thumb"><img src={thumbnail} alt="" draggable="false"></div>
     <div class="flex gap-[12px] mt-[12px]">
         <div class="max-w-[36px] "><img {src} alt="" class="rounded-full"></div>
         <div class="grow">
@@ -16,11 +16,12 @@
 
         </div>
     </div>
-</div>
+</a>
 
 <style lang="scss">
-    
+
     .video{
+        cursor: pointer;
         .thumb{
             border-radius: 10px;
             overflow: hidden;

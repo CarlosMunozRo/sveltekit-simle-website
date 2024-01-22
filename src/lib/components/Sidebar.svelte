@@ -1,16 +1,18 @@
 <script lang="ts">
+    import { ui } from '$lib/stores/UiStore.ts';
 
+    let src="https://yt3.googleusercontent.com/ytc/AIf8zZTISnAkD2kHuVZMRVTr5QNCww-gagEU9xDdc_w6=s176-c-k-c0x00ffffff-no-rj";
 
 </script>
 
 <div class="sidebar min-w-[240px] flex flex-col gap-2 p-[12px]">
-    
-    <a href="#da" class="btn active"><span class="icon material-symbols-outlined">home</span><span>Home</span></a>
-    <a href="#da" class="btn"><span class="icon material-symbols-outlined">home</span><span>Home</span></a>
+    {$ui.sidebar}
+    <a href="/" class="btn active"><span class="icon material-symbols-outlined">home</span><span>Home</span></a>
+    <a href="/" class="btn"><span class="icon material-symbols-outlined">subscriptions</span><span>Suscripciones</span></a>
     <hr>
-    <a href="#da" class="btn"><span class="icon material-symbols-outlined">home</span><span>Test</span></a>
-    <a href="#da" class="btn"><span class="icon material-symbols-outlined">home</span><span>Test</span></a>
-    <a href="#da" class="btn"><span class="icon material-symbols-outlined">home</span><span>Test</span></a>
+    <a href="/" class="btn"><span class="icon"><img class="rounded-full" {src} alt=""></span><span>Test</span></a>
+    <a href="/" class="btn"><span class="icon"><img class="rounded-full" {src} alt=""></span><span>Test</span></a>
+    <a href="/" class="btn"><span class="icon"><img class="rounded-full" {src} alt=""></span><span>Test</span></a>
 
 </div>
 
@@ -18,7 +20,25 @@
 
     .sidebar{
         position: sticky;
-        top: 0;
+        top: 82px;
+        height: calc(100svh - 82px);
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+        background: transparent; 
+        }
+
+        &::-webkit-scrollbar-thumb {
+        background: transparent;
+            border-radius: 500px;
+        }
+
+        &:hover::-webkit-scrollbar-thumb {
+            background: #4A4A4A;
+        }
     }
 
     hr{
