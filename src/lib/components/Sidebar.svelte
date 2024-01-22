@@ -5,7 +5,7 @@
 
 </script>
 
-<div class="sidebar flex flex-col gap-2 p-[12px]" class:closed={$ui.sidebar}>
+<div class="sidebar flex flex-col gap-2 p-[12px]" class:open={$ui.sidebar}>
     <a href="/" class="btn active"><span class="icon material-symbols-outlined">home</span><span>Home</span></a>
     <a href="/" class="btn"><span class="icon material-symbols-outlined">subscriptions</span><span>Suscripciones</span></a>
     <hr>
@@ -43,7 +43,7 @@
             background: #4A4A4A;
         }
 
-        &.closed{
+        &:not(.open){
             width: 0px;
             min-width: 0px;
             padding-left: 0px;
