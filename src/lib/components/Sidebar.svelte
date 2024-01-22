@@ -5,8 +5,7 @@
 
 </script>
 
-<div class="sidebar min-w-[240px] flex flex-col gap-2 p-[12px]">
-    {$ui.sidebar}
+<div class="sidebar flex flex-col gap-2 p-[12px]" class:closed={$ui.sidebar}>
     <a href="/" class="btn active"><span class="icon material-symbols-outlined">home</span><span>Home</span></a>
     <a href="/" class="btn"><span class="icon material-symbols-outlined">subscriptions</span><span>Suscripciones</span></a>
     <hr>
@@ -23,6 +22,10 @@
         top: 82px;
         height: calc(100svh - 82px);
         overflow: auto;
+        transition: all 0.3s ease-in-out;
+        width: 240px;
+        min-width: 240px;
+
         &::-webkit-scrollbar {
             width: 10px;
         }
@@ -39,6 +42,14 @@
         &:hover::-webkit-scrollbar-thumb {
             background: #4A4A4A;
         }
+
+        &.closed{
+            width: 0px;
+            min-width: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
     }
 
     hr{

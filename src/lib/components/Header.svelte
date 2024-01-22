@@ -11,9 +11,7 @@
         })
     });
 
-    function UpdateUI(){
-        ui.set({sidebar: !$ui.sidebar});
-    }
+
 
     let search = "";
     let searchPlaceHolder = "Buscar";
@@ -21,8 +19,8 @@
 </script>
 
 <header class="header p-4">
-    <div class="flex justify-between">
-        <button on:click={UpdateUI}>
+    <div class="flex justify-between items-center">
+        <button on:click={ui.set({sidebar: !$ui.sidebar})}>
             <img src={icon} alt="" class="logo" draggable="false">
         </button>
         <div>

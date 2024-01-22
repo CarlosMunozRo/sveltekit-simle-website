@@ -2,7 +2,7 @@
     let src = "https://www.w3schools.com/html/mov_bbb.mp4"
 </script>
 
-<div class="flex pt-[12px]">
+<div class="flex pt-[12px] px-[16px]">
     <div class="grow">
         <div>
             <video class="video" {src} controls  autoplay loop></video>

@@ -18,7 +18,7 @@
 
 <style lang="scss">
     .videos{
-        padding: 12px 30px;
+        padding: 12px 16px;
         display: grid;
         grid-template-columns: repeat(4, minmax(240px, 1fr));
         grid-gap: 50px 16px;
