@@ -5,7 +5,7 @@
 <div class="flex pt-[12px] px-[16px]">
     <div class="grow">
         <div>
-            <video class="video" {src} controls  autoplay loop></video>
+            <video class="video" {src} controls  autoplay></video>
             <h1 class="pt-5 text-[25px] font-bold">32 Reasons WHY TS IS BETTER Than Go</h1>
         </div>
     </div>
@@ -18,8 +18,9 @@
     .video{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 10px;
+        max-height: 80vh;
     }
 
 
